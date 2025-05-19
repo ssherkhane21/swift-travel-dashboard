@@ -109,12 +109,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
           <NavGroup title="Users">
             <NavItem to="/customer-management" icon={Users} label="Customer Management" isActive={isActive('/customer-management')} />
-            {/* Comment out the unavailable pages */}
-            {/* <NavItem to="/user-management" icon={UserCog} label="User Management" isActive={isActive('/user-management')} /> */}
+            <NavItem to="/user-management" icon={UserCog} label="User Management" isActive={isActive('/user-management')} />
           </NavGroup>
 
-          {/* Comment out the unavailable sections */}
-          {/* <NavGroup title="Finance">
+          <NavGroup title="Finance">
             <NavItem to="/commission-management" icon={Percent} label="Commission Management" isActive={isActive('/commission-management')} />
             <NavItem to="/coupons" icon={Tag} label="Coupons" isActive={isActive('/coupons')} />
             <NavItem to="/wallet" icon={Wallet} label="Wallet Management" isActive={isActive('/wallet')} />
@@ -122,7 +120,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
           <NavGroup title="Communications">
             <NavItem to="/notifications" icon={Bell} label="Notifications & Alerts" isActive={isActive('/notifications')} />
-          </NavGroup> */}
+          </NavGroup>
         </div>
       </aside>
     </>

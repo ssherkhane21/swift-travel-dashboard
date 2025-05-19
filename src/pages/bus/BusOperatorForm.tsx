@@ -253,6 +253,16 @@ const BusOperatorForm: React.FC = () => {
                 
                 <div className="md:col-span-2">
                   <FileUpload
+                    id="businessLicenseImage"
+                    label="Business License Image"
+                    accept="image/*,.pdf"
+                    maxSize={5}
+                    helpText="Upload business license document (PNG, JPG, PDF up to 5MB)"
+                  />
+                </div>
+                
+                <div className="md:col-span-2">
+                  <FileUpload
                     id="idCardFront"
                     label="ID Card Front"
                     accept="image/*,.pdf"
