@@ -19,28 +19,36 @@ const Dashboard: React.FC = () => {
           title="Total Bookings" 
           value="12,456" 
           icon={<CreditCard size={18} />} 
-          delta={{ value: 12.5, isPositive: true }}
+          trend="up"
+          trendValue="12.5%"
+          description="vs. last month"
         />
         
         <StatCard 
           title="Hotel Bookings" 
           value="5,280" 
           icon={<Hotel size={18} />} 
-          delta={{ value: 8.2, isPositive: true }}
+          trend="up"
+          trendValue="8.2%"
+          description="vs. last month"
         />
         
         <StatCard 
           title="Bus Bookings" 
           value="3,790" 
           icon={<Bus size={18} />} 
-          delta={{ value: 15.3, isPositive: true }}
+          trend="up"
+          trendValue="15.3%"
+          description="vs. last month"
         />
         
         <StatCard 
           title="Active Users" 
           value="28.4K" 
           icon={<Users size={18} />} 
-          delta={{ value: 3.2, isPositive: true }}
+          trend="up"
+          trendValue="3.2%"
+          description="vs. last month"
         />
       </div>
       
