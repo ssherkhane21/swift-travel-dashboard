@@ -36,8 +36,8 @@ const NavItem: React.FC<NavItemProps> = ({ to, icon: Icon, label, isActive, isCo
       to={to}
       className={`flex items-center px-4 py-3 mb-1 transition-colors rounded-md ${
         isActive
-          ? 'bg-sidebar-accent text-sidebar-primary-foreground'
-          : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-primary-foreground'
+          ? 'bg-blue-600 text-white'
+          : 'text-gray-700 hover:bg-blue-100 hover:text-blue-600'
       }`}
     >
       <Icon className={`${isCollapsed ? 'mx-auto' : 'mr-3'}`} size={20} />
@@ -54,7 +54,7 @@ const NavGroup: React.FC<{ title: string; children: React.ReactNode; isCollapsed
   return (
     <div className="mb-6">
       {!isCollapsed && (
-        <h3 className="px-4 mb-2 text-xs font-semibold text-sidebar-foreground/70 uppercase">
+        <h3 className="px-4 mb-2 text-xs font-semibold text-gray-500 uppercase">
           {title}
         </h3>
       )}
@@ -79,25 +79,25 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
 
       {/* Sidebar */}
       <aside 
-        className={`fixed top-0 left-0 z-30 h-full w-64 bg-sidebar-DEFAULT transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto ${
+        className={`fixed top-0 left-0 z-30 h-full w-64 bg-white border-r shadow-sm transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:z-auto ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between h-16 px-4 text-sidebar-foreground">
+        <div className="flex items-center justify-between h-16 px-4 border-b">
           <div className="flex items-center">
-            <span className="text-xl font-bold">SwiftTravel</span>
+            <span className="text-xl font-bold text-blue-600">SwiftTravel</span>
           </div>
           <button 
             onClick={toggleSidebar} 
-            className="p-1 rounded-md lg:hidden hover:bg-sidebar-accent"
+            className="p-1 rounded-md lg:hidden text-gray-600 hover:bg-gray-100"
           >
             <X size={20} />
           </button>
         </div>
 
-        <div className="px-3 py-4 overflow-y-auto scrollbar-hide">
+        <div className="px-3 py-4 overflow-y-auto">
           <NavGroup title="Core">
-            <NavItem to="/" icon={Home} label="Dashboard" isActive={isActive('/')} />
+            <NavItem to="/dashboard" icon={Home} label="Dashboard" isActive={isActive('/dashboard')} />
           </NavGroup>
 
           <NavGroup title="Transportation">
