@@ -22,13 +22,14 @@ import BikeRiderForm from "./pages/bike/BikeRiderForm";
 import BikeBookingDetails from "./pages/bike/BikeBookingDetails";
 import CustomerManagement from "./pages/customer/CustomerManagement";
 import CustomerDetails from "./pages/customer/CustomerDetails";
-import UserManagement from "./pages/user/UserManagement";
-import UserForm from "./pages/user/UserForm";
-import CommissionManagement from "./pages/commission/CommissionManagement";
-import CouponManagement from "./pages/coupon/CouponManagement";
-import CouponForm from "./pages/coupon/CouponForm";
-import WalletManagement from "./pages/wallet/WalletManagement";
-import NotificationManagement from "./pages/notification/NotificationManagement";
+// The following imports are commented out until we create these files
+// import UserManagement from "./pages/user/UserManagement";
+// import UserForm from "./pages/user/UserForm";
+// import CommissionManagement from "./pages/commission/CommissionManagement";
+// import CouponManagement from "./pages/coupon/CouponManagement";
+// import CouponForm from "./pages/coupon/CouponForm";
+// import WalletManagement from "./pages/wallet/WalletManagement";
+// import NotificationManagement from "./pages/notification/NotificationManagement";
 
 const queryClient = new QueryClient();
 
@@ -71,24 +72,25 @@ const App = () => (
           <Route path="/customer-management" element={<AppLayout><CustomerManagement /></AppLayout>} />
           <Route path="/customer-management/customers/:id" element={<AppLayout><CustomerDetails /></AppLayout>} />
           
+          {/* The following routes are commented out until we create their respective components */}
           {/* User Management Routes */}
-          <Route path="/user-management" element={<AppLayout><UserManagement /></AppLayout>} />
+          {/* <Route path="/user-management" element={<AppLayout><UserManagement /></AppLayout>} />
           <Route path="/user-management/add-user" element={<AppLayout><UserForm /></AppLayout>} />
-          <Route path="/user-management/users/:id" element={<AppLayout><UserForm /></AppLayout>} />
+          <Route path="/user-management/users/:id" element={<AppLayout><UserForm /></AppLayout>} /> */}
           
           {/* Commission Management Route */}
-          <Route path="/commission-management" element={<AppLayout><CommissionManagement /></AppLayout>} />
+          {/* <Route path="/commission-management" element={<AppLayout><CommissionManagement /></AppLayout>} /> */}
           
           {/* Coupon Management Routes */}
-          <Route path="/coupons" element={<AppLayout><CouponManagement /></AppLayout>} />
+          {/* <Route path="/coupons" element={<AppLayout><CouponManagement /></AppLayout>} />
           <Route path="/coupons/add" element={<AppLayout><CouponForm /></AppLayout>} />
-          <Route path="/coupons/:id" element={<AppLayout><CouponForm /></AppLayout>} />
+          <Route path="/coupons/:id" element={<AppLayout><CouponForm /></AppLayout>} /> */}
           
           {/* Wallet Management Route */}
-          <Route path="/wallet" element={<AppLayout><WalletManagement /></AppLayout>} />
+          {/* <Route path="/wallet" element={<AppLayout><WalletManagement /></AppLayout>} /> */}
           
           {/* Notification Management Route */}
-          <Route path="/notifications" element={<AppLayout><NotificationManagement /></AppLayout>} />
+          {/* <Route path="/notifications" element={<AppLayout><NotificationManagement /></AppLayout>} /> */}
           
           <Route path="*" element={<NotFound />} />
         </Routes>
