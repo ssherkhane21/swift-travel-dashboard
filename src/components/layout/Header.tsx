@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { 
   Menu, 
   Bell, 
-  User, 
-  Settings, 
   LogOut, 
   Search, 
   ChevronDown 
@@ -111,15 +109,6 @@ export const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-56">
               <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem className="cursor-pointer">
-                <User className="mr-2 h-4 w-4" />
-                <span>Profile</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer">
-                <Settings className="mr-2 h-4 w-4" />
-                <span>Settings</span>
-              </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem className="cursor-pointer text-red-500 focus:text-red-500">
                 <LogOut className="mr-2 h-4 w-4" />

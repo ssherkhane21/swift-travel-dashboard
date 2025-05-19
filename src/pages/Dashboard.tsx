@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { PageHeader } from '@/components/common/PageHeader';
 import { StatCard } from '@/components/common/StatCard';
 import { BookingChart } from '@/components/dashboard/BookingChart';
@@ -55,10 +55,6 @@ const Dashboard: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <BookingChart />
         <RevenueChart />
-      </div>
-      
-      <div className="grid grid-cols-1 gap-6">
-        {/* Add more dashboard components here */}
       </div>
     </div>
   );
