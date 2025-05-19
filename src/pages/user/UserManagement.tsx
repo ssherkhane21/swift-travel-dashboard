@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PageHeader } from '@/components/common/PageHeader';
 import { DataTable } from '@/components/common/DataTable';
@@ -12,7 +11,7 @@ interface User {
   name: string;
   email: string;
   role: 'admin' | 'subadmin' | 'manager';
-  status: 'active' | 'inactive';
+  status: 'approved' | 'pending' | 'rejected' | 'submitted' | 'blocked';
   lastLogin: string;
 }
 
@@ -23,7 +22,7 @@ const users: User[] = [
     name: 'Admin User',
     email: 'admin@swifttravel.com',
     role: 'admin',
-    status: 'active',
+    status: 'approved',
     lastLogin: '2023-10-15 10:30 AM',
   },
   {
@@ -31,7 +30,7 @@ const users: User[] = [
     name: 'Manager User',
     email: 'manager@swifttravel.com',
     role: 'manager',
-    status: 'active',
+    status: 'approved',
     lastLogin: '2023-10-14 02:45 PM',
   },
   {
@@ -39,7 +38,7 @@ const users: User[] = [
     name: 'Subadmin User',
     email: 'subadmin@swifttravel.com',
     role: 'subadmin',
-    status: 'inactive',
+    status: 'rejected',
     lastLogin: '2023-10-10 09:15 AM',
   },
 ];
